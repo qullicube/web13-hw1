@@ -10,4 +10,13 @@
  *
  *= require_self
  *= require_tree .
+ *= require jquery.ui.all
  */
+
+#mainbody {
+	width:960px;
+	margin: 0 auto;
+	padding: 30px 30px 0 30px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
