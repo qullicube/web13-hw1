@@ -5,6 +5,7 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
+    @posts = Post.all
     render layout: "application"
   end
 

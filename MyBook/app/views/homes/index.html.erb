@@ -1,5 +1,5 @@
     <div>
-      <div class="well" style="overflow:auto">
+      <div class="well divfix">
       	<%= image_tag("facebook_2_1.jpg", :class=>"pull-left" , :style=>"display: inline-block; height:50px")%>
 
       	<form class="form-inline pull-right">
@@ -10,7 +10,7 @@
 
       </div>
 
-      <div class="well well-large" style="overflow:auto" >
+      <div class="well well-large divfix" >
       	 <%= image_tag("flat-27716_640.png", :class=>"img-polaroid pull-left", :style=>"margin-right:30px; width:100px; display: inline-block;")%>
         <div>
         	<h4>
@@ -79,10 +79,10 @@
         </div>
       </div>
 
-      <div class = "well" style= "overflow:auto">
+      <div class = "well divfix">
       		<div class="status pull-left">
       			<form style="margin-left:10px; margin-top:10px">
-      				<input type="text" class="input-xlarge" placeholder="What's in your mind?">
+      				<textarea placeholder="What's in your mind?" required></textarea>
       			</form>
       		</div>
       		
@@ -111,7 +111,8 @@
       		</div>
       </div>
 
-      <div class = "well" style= "overflow:auto">
+      <% @posts.each do |post| %>
+      <div class = "well divfix">
       		<div class="response pull-left">
             <table class="table">  
               
@@ -137,8 +138,8 @@
       		</div>
       		
       		<div class="status pull-right" style="padding-top=10px; padding-left=10px">
-      			Display Previous Status here
+      			<%= post.body %>
       		</div>
       </div>
-
     </div>
+    <% end %>
