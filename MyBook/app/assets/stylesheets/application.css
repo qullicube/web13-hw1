@@ -25,6 +25,9 @@ body {
 .divfix {
 	overflow:hidden;
 }
+.middle {
+	margin:auto 0;
+}
 #mainbody {
 	width:960px;
 	height:100%;
