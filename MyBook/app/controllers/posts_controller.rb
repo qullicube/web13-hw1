@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all(:order=>'created_at DESC')
+    @posts = Post.all(:order=>'created_at ASC')
   end
 
   # GET /posts/1
@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     respond_to do |format|
+      puts @post
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
