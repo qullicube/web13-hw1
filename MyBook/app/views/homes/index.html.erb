@@ -1,4 +1,4 @@
- <div class="well divfix">
+ <div class="well divfix" style="border-top:10px solid #0066FF">
       	<%= image_tag("facebook_2_1.jpg", :class=>"pull-left" , :style=>"display: inline-block; height:50px")%>
 
       	<form class="form-inline pull-right">
@@ -9,7 +9,7 @@
 
       </div>
 
-      <div class="well well-large divfix" >
+      <div class="well well-large divfix" style="border-top:10px solid #0099FF ">
       	 <%= image_tag("flat-27716_640.png", :class=>"img-polaroid pull-left", :style=>"margin-right:30px; width:100px; display: inline-block;")%>
         <div>
         	<h4>
@@ -36,24 +36,24 @@
             </tr>
             
             <tr>
-              <td class="span3">
+              <td class="span3 text-center">
                 <div id="education">
-                  
+                  ICE
                 </div>
               </td> 
-              <td class="span3">
+              <td class="span3 text-center">
                 <div id="Hobbies">
-                  
+                  Programing
                 </div>
               </td>
-              <td class="span3">
+              <td class="span3 text-center">
                 <div id="Birthday">
-                  
+                  22 May 1992
                 </div>
               </td>
-              <td class="span3">
+              <td class="span3 text-center">
                 <div id="RelationshipStatus">
-                  
+                  -
                 </div>
               </td>
             </tr>
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class = "well divfix">
+      <div class = "well divfix" style="border-top:10px solid #00CCFF">
       			<form style="margin-left:10px; margin-top:10px">
       				<textarea class="status pull-left" placeholder="What's in your mind?" required></textarea>
             </form>
@@ -87,7 +87,7 @@
       </div>
 
       <% @posts.each do |post| %>
-      <div class = "well divfix">
+      <div class = "well divfix"  style="border-top:10px solid #00CCFF">
       		<div class="<%= cycle("pull-left","pull-right", name:"comment") -%>">
           <ul class="nav nav-pills">
               <li>

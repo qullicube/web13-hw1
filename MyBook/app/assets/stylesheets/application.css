@@ -21,7 +21,10 @@ html {
 }
 body {
 	height:100%;
+	
 }
+
+
 .divfix {
 	overflow:hidden;
 }
@@ -35,6 +38,7 @@ body {
 	padding: 30px 30px 30px 30px;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
+	background-color: #CCCCCC;
 }
 
 .status {
