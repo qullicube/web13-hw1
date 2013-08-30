@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  education: MyText
+  hobbies: 
+  birthday: 2013-08-30
+  relationship: MyText
+
+two:
+  education: MyText
+  hobbies: 
+  birthday: 2013-08-30
+  relationship: MyText
