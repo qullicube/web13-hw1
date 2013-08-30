@@ -64,10 +64,7 @@
       </div>
 
       <div class = "well divfix" style="border-top:10px solid #00CCFF">
-      			<form style="margin-left:10px; margin-top:10px">     	
-              <textarea class="status pull-left" placeholder="What's in your mind?" required></textarea>
-                     
-            </form>
+              <%= render 'posts/form' %>
       		
       		<div class="pull-right">
             <ul class="nav nav-pills">
@@ -88,25 +85,7 @@
       		</div>
       </div>
 
-      <% @posts.each do |post| %>
-      <div class = "well divfix"  style="border-top:10px solid #00CCFF">
-      		<div class="<%= cycle("pull-left","pull-right", name:"comment") -%>">
-          <ul class="nav nav-pills">
-              <li>
-              <div class="btn " href="#" style="margin-left:10px;"><i class="icon-star"></i> Like
-              </div>
-              </li>
-              <li>
-              <div class="input-prepend">
-                <form style="margin-left:10px" class="form-small">
-                  <span class="add-on"><i class="icon-envelope"></i></span>
-                  <input class="span2 input-large" id="inputIcon" type="text" placeholder="Comment">
-                </form>                           
-              </div>
-              </li>
-            </ul>
-      		</div>
-      		
-      		<textarea class="status <%= cycle("pull-right","pull-left", name: "textarea") -%>" style="color: rgb(51, 51, 51);padding-top=10px; padding-left=10px" readonly><%= post.body %></textarea>
+
+      <div id="status-show">
+      <%= render :partial => 'layouts/post', :locals => {:posts=>@posts } %>
       </div>
-      <% end %>

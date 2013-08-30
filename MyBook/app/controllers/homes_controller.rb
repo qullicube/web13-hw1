@@ -4,8 +4,9 @@ class HomesController < ApplicationController
   # GET /homes
   # GET /homes.json
   def index
+    @post = Post.new
     @homes = Home.all
-    @posts = Post.all
+    @posts = Post.all(:order=>'created_at DESC')
     render layout: "application"
   end
 

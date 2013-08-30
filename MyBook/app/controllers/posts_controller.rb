@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Post.all(:order =>'created_at DESC');
   end
 
   # GET /posts/new
@@ -27,9 +28,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     respond_to do |format|
-      puts @post
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { render :partial =>'layouts/post', :locals => { :posts => Post.all(:order =>'created_at DESC')}}
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }

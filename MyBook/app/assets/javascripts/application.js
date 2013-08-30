@@ -26,10 +26,11 @@ function handlePostSubmit(e,textarea) {
 					url: form.attr('action'),
 					method: "POST",
 					data: serializedData,
-					dataType: 'JSON'
-				}).success(function(json){
+					dataType: "HTML"
+				}).success(function(data){
+					$(textarea).focus();
 					$(textarea).val('');
-					console.log(json);
+					$('#status-show').html(data);
 				});
 
 		}
