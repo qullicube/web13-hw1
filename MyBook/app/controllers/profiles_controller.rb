@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:fetch, :show, :edit, :update, :destroy]
 
   # GET /profiles
   # GET /profiles.json
@@ -19,6 +19,11 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+  end
+
+  def fetch
+    @profile = Profile.first()
+    render :partial => 'layouts/profile_edit', :locals => {:profile => @profile}
   end
 
   # POST /profiles
@@ -42,7 +47,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { render :partial => 'layouts/profile', :locals=> {:profile => @profile}}
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -60,6 +65,8 @@ class ProfilesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,0 +1,24 @@
+              
+<% if profile.present? %>
+          <table id="profile-show-only" style="cellspacing:10px">
+              <tr>
+              <th class="span3">Education</th>
+              <td><%= profile.education %></td>
+              </tr> 
+              
+              <tr>
+              <th>Hobbies</th>
+              <td><%= profile.hobbies %></td>
+              </tr>
+
+              <tr>
+              <th>Birthday</th>
+              <td><%= profile.birthday %></td>
+              </tr>
+
+              <tr>
+              <th>Relationship</th>
+              <td><%= profile.relationship %></td>
+              </tr>
+          </table>
+<% end %>
