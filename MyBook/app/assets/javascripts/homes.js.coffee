@@ -22,7 +22,7 @@ $(document).ready ->
         sData = form.serialize()
         $.ajax(
           url: form.attr("action")
-          method: "PUT"
+          type: "PUT"
           data: sData
           dataType: "HTML"
         ).success (data) ->

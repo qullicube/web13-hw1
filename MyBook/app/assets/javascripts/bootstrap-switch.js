@@ -244,8 +244,9 @@
     else
       $.error('Method ' + method + ' does not exist!');
   };
-}(jQuery);
 
-$(function () {
+  $(function () {
   $('.switch')['bootstrapSwitch']();
 });
+  
+}(jQuery);
