@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require flatuipro
+//= require bootstrap-switch
 //= require_tree .
 //= require jquery.ui.all
 
