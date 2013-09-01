@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { render :partial =>'layouts/post', :locals => { :posts => Post.all(:order =>'created_at DESC')}}
+        format.html { render text: 'success' } #:partial =>'layouts/post', :locals => { :posts => Post.all(:order =>'created_at DESC')}}
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render text: 'error' }
