@@ -32,7 +32,7 @@ class PostsController < ApplicationController
         format.html { render :partial =>'layouts/post', :locals => { :posts => Post.all(:order =>'created_at DESC')}}
         format.json { render action: 'show', status: :created, location: @post }
       else
-        format.html { render action: 'new' }
+        format.html { render text: 'error' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end

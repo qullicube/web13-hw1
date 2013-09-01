@@ -26,9 +26,8 @@ function handlePostSubmit(e,textarea) {
 					url: form.attr('action'),
 					method: "POST",
 					data: serializedData,
-					dataType: "JSON"
+					dataType: "HTML"
 				}).success(function(data){
-					console.log(data);
 					$(textarea).focus();
 					$(textarea).val('');
 					$('#status-show').html(data);
