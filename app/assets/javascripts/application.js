@@ -24,7 +24,7 @@ function handlePostSubmit(e,textarea) {
 			var serializedData = form.serialize();
 				$.ajax({
 					url: form.attr('action'),
-					method: "POST",
+					type: "POST",
 					data: serializedData,
 					dataType: "HTML"
 				}).success(function(data){
