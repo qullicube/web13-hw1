@@ -1,4 +1,4 @@
- <div class="well divfix" style="border-top:10px solid #0066FF">
+ <div class="well divfix">
       	<%= image_tag("facebook_2_1.jpg", :class=>"pull-left" , :style=>"display: inline-block; height:50px")%>
 
       	<form class="form-inline pull-right">
@@ -9,7 +9,7 @@
 
       </div>
 
-      <div class="well well-large divfix" style="border-top:10px solid #0099FF">
+      <div class="well well-large divfix">
       	 <%= image_tag("flat-27716_640.png", :class=>"img-polaroid pull-left", :style=>"margin-right:30px; width:100px; display: inline-block;")%>
         <div>
         	<h4>
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class = "well divfix" style="border-top:10px solid #00CCFF">
+      <div class = "well divfix">
       			<form style="margin-left:10px; margin-top:10px">     	
               <textarea class="status pull-left" placeholder="What's in your mind?" required></textarea>
                      
@@ -89,7 +89,7 @@
       </div>
 
       <% @posts.each do |post| %>
-      <div class = "well divfix"  style="border-top:10px solid #00CCFF">
+      <div class = "well divfix">
       		<div class="<%= cycle("pull-left","pull-right", name:"comment") -%>">
           <ul class="nav nav-pills">
               <li>
