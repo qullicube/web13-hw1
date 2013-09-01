@@ -16,3 +16,37 @@
 //= require flatuipro
 //= require_tree .
 //= require jquery.ui.all
+
+function handlePostSubmit(e,textarea) {
+	if(!e.shiftKey){
+		if(e.keyCode == 13){
+			var form = $('form#new_post');
+			var serializedData = form.serialize();
+				$.ajax({
+					url: form.attr('action'),
+					method: "POST",
+					data: serializedData,
+					dataType: "HTML"
+				}).success(function(data){
+					$(textarea).focus();
+					$(textarea).val('');
+					$('#status-show').html(data);
+				});
+
+		}
+	}
+}
+
+function handlePostKey(e) {
+	if(!e.shiftKey) {
+		if(e.keyCode == 13){
+			return false;
+		}
+	}
+	else{
+		if(e.keyCode == 13){
+			return true;
+		}
+	}
+	return true;
+}

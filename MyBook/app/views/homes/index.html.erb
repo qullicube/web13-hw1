@@ -13,61 +13,27 @@
       	 <%= image_tag("flat-27716_640.png", :class=>"img-polaroid pull-left", :style=>"margin-right:30px; width:100px; display: inline-block;")%>
         <div>
         	<h4>
-            My name is poon
+            Chatchanon Chinvetkitvanit 
 
-            <button class="btn btn-mini pull-right" type="button">Edit</button>
+            <button class="btn btn-mini pull-right" type="button" id="profile-edit-btn">Edit</button>
           </h4>
-          
-          <table style="cellspacing:10px">
-            
-            <tr style="cellspacing:10px">
-              <th class="span3">
-                Education
-              </th>  
-              <th class="span3">  
-                Hobbies
-              </th>  
-              <th class="span3">  
-                Birthday
-              </th>  
-              <th class="span3"> 
-                Relationship Status
-              </th> 
-            </tr>
-            
-            <tr>
-              <td class="span3 text-center">
-                <div id="education">
-                  ICE
-                </div>
-              </td> 
-              <td class="span3 text-center">
-                <div id="Hobbies">
-                  Programing
-                </div>
-              </td>
-              <td class="span3 text-center">
-                <div id="Birthday">
-                  22 May 1992
-                </div>
-              </td>
-              <td class="span3 text-center">
-                <div id="RelationshipStatus">
-                  -
-                </div>
-              </td>
-            </tr>
-          </table>
-
+          <div id="profile-show">
+              <%= render :partial => 'layouts/profile', :locals => { :profile => @profile} %>
+          </div>
 
         </div>
       </div>
 
+<<<<<<< HEAD
       <div class = "well divfix">
       			<form style="margin-left:10px; margin-top:10px">     	
               <textarea class="status pull-left" placeholder="What's in your mind?" required></textarea>
                      
             </form>
+=======
+      <div class = "well divfix" style="border-top:10px solid #00CCFF">
+              <%= render 'posts/form' %>
+>>>>>>> cf7074595d206f80dbb2f7756c9ccc452a55ed92
       		
       		<div class="pull-right">
             <ul class="nav nav-pills">
@@ -88,6 +54,7 @@
       		</div>
       </div>
 
+<<<<<<< HEAD
       <% @posts.each do |post| %>
       <div class = "well divfix">
       		<div class="<%= cycle("pull-left","pull-right", name:"comment") -%>">
@@ -110,3 +77,9 @@
       		<textarea class="status <%= cycle("pull-right","pull-left", name: "textarea") -%>" style="color: rgb(51, 51, 51);padding-top=10px; padding-left=10px" readonly><%= post.body %></textarea>
       </div>
       <% end %>
+=======
+
+      <div id="status-show">
+      <%= render :partial => 'layouts/post', :locals => {:posts=>@posts } %>
+      </div>
+>>>>>>> cf7074595d206f80dbb2f7756c9ccc452a55ed92
