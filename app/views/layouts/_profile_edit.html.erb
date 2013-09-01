@@ -1,0 +1,36 @@
+              
+<% if profile.present? %>
+<%= form_for(profile, :remote => true) do |f| %>
+              
+          <table id="profile-edit-form" style="cellspacing:10px">
+
+              <tr>
+              <th class="span3">Education</th>
+              <td><%= f.text_field :education %></td>
+              </tr> 
+              
+              <tr>
+              <th>Hobbies</th>
+              <td><%= f.text_field :hobbies %></td>
+              </tr>
+
+              <tr>
+              <th>Birthday</th>
+              <td><%= f.date_select :birthday, {:start_year => 1920, :order => [:day, :month, :year]}, {:class => "date-select"} %></td>
+              </tr>
+
+              <tr>
+              <th>Relationship</th>
+              <td><%= f.text_field :relationship %></td>
+              </tr>
+              <tr>
+              <td class="text-center" colspan="2">
+                <div class="pull-right">
+                  <%= f.submit "Save", :class => "btn" %>
+                  <button class="btn" id="profile-cancel-btn">Cancel</button>
+                </div>
+              </td>
+              </tr>
+            </table>
+<% end %>
+<% end %>
